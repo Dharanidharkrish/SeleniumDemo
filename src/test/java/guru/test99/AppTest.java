@@ -20,6 +20,7 @@ public class AppTest {
 		driver = new ChromeDriver(opt);
 		driver.get("https://www.wikipedia.org/");
 		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar");
+		driver.findElements(By.cssSelector("button[type='submit']")).click();
 		//WebElement textbox =driver.findElement(By.name("search"));
 		//textbox.sendKeys(Keys.ENTER);
                
