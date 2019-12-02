@@ -12,7 +12,7 @@ public class AppTest {
 	@Test
   public void test() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
-		        "/home/ec2-user/cdriver/chromedriver");
+		        "/usr/bin/chromedriver");
 		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("--headless");
 		opt.addArguments("window-size=1920x1080");
@@ -35,4 +35,3 @@ public class AppTest {
 		
 	}
 }
-
