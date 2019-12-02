@@ -12,14 +12,14 @@ public class AppTest {
 	@Test
   public void test() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
-		        "/usr/bin/chromedriver");
+		        "/home/ec2-user/cdriver/chromedriver");
 		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("--headless");
 		opt.addArguments("window-size=1920x1080");
 		//opt.addArguments("--no-sandbox");
 		driver = new ChromeDriver(opt);
 		driver.get("https://www.wikipedia.org/");
-		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar"+ Keys.ENTER);
+		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar"+Keys.ENTER);
                
           String title= driver.getTitle();
           System.out.println(title);
