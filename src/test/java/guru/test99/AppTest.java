@@ -20,12 +20,13 @@ public class AppTest {
 		driver = new ChromeDriver(opt);
 		driver.get("https://www.wikipedia.org/");
 		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar");
-		driver.findElement(By.name("search")).sendKeys(Keys.ENTER);
+		//WebElement textbox =driver.findElement(By.name("search"));
+		//textbox.sendKeys(Keys.ENTER);
                
           String title= driver.getTitle();
           System.out.println(title);
         
-          if(title.equalsIgnoreCase("Sachin Tendulkar - Wikipedia")){
+          if(title.equalsIgnoreCase("Wikipedia")){
           System.out.println("Success");
           }
           else{
