@@ -18,13 +18,19 @@ public class AppTest {
 		opt.addArguments("window-size=1920x1080");
 		//opt.addArguments("--no-sandbox");
 		driver = new ChromeDriver(opt);
-		driver.get("https://www.wikipedia.org/");
-		//driver.findElement(By.id("logbutton")).click();
 		
-		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar");
-		//driver.findElement(By.id("pwdcheck")).sendKeys("Krish");
+		//driver.get("https://www.wikipedia.org/");
+		driver.get("");
 		
-		driver.findElement(By.className("pure-button")).click();
+		driver.findElement(By.id("logbutton")).click();
+		
+		//driver.findElement(By.id("search")).sendKeys("Sachin Tendulkar");
+		
+		driver.findElement(By.id("namecheck")).sendKeys("Kris");
+		driver.findElement(By.id("pwdcheck")).sendKeys("Krish");
+		driver.findElement(By.id("chklogin")).click();
+		
+		//driver.findElement(By.className("pure-button")).click();
 		
 		//WebElement textbox =driver.findElement(By.name("search"));
 		//textbox.sendKeys(Keys.ENTER);
@@ -32,7 +38,7 @@ public class AppTest {
           String title= driver.getTitle();
           System.out.println(title);
         
-          if(title.equalsIgnoreCase("Sachin Tendulkar - Wikipedia")){
+          if(title.equalsIgnoreCase("SeleniumTest")){
           System.out.println("Success");
           }
           else{
