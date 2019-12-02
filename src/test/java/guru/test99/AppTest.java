@@ -21,7 +21,7 @@ public class AppTest {
 		driver.get("https://www.wikipedia.org/");
 		//driver.findElement(By.id("logbutton")).click();
 		
-		driver.findElement(By.id("search")).sendKeys("Sachin Tendulkar");
+		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar");
 		//driver.findElement(By.id("pwdcheck")).sendKeys("Krish");
 		
 		driver.findElement(By.className("pure-button")).click();
