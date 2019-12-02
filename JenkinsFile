@@ -1,0 +1,27 @@
+pipeline{
+ agents any
+    tools{
+      maven 'Maven'
+    }
+    
+ stages{
+    stage('compile-build')
+     {
+      steps{
+           sh 'mvn clean install -DskipTests'
+       }
+     }
+    stage('Deploy')
+      {
+        steps{
+          deploy adapters: [tomcat8(credentialsId: 'tomcat', path: '', url: 'http://13.127.53.13:8990/')], contextPath: null, onFailure: false, war: '**/*.war'
+        }
+      }
+    stage('Selenium Test')
+      {
+        steps{
+          sh 'mvn test'
+        }
+      }
+ }
+}
