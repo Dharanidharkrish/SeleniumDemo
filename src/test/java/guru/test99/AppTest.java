@@ -20,7 +20,7 @@ public class AppTest {
 		driver = new ChromeDriver(opt);
 		driver.get("https://www.wikipedia.org/");
 		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar");
-		driver.findElement(By.class("sprite svg-search-icon")).click();
+		driver.findElement(By.className("sprite svg-search-icon")).click();
                
           String title= driver.getTitle();
           System.out.println(title);
