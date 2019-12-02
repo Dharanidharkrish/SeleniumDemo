@@ -22,9 +22,9 @@ public class AppTest {
 		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar"+ keys.ENTER);
                
           String title= driver.getTitle();
-          System.out.println(h);
+          System.out.println(title);
         
-          if(h.equalsIgnoreCase("Sachin Tendulkar - Wikipedia")){
+          if(title.equalsIgnoreCase("Sachin Tendulkar - Wikipedia")){
           System.out.println("Success");
           }
           else{
