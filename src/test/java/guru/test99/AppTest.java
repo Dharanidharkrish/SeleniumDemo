@@ -18,16 +18,19 @@ public class AppTest {
 		opt.addArguments("window-size=1920x1080");
 		//opt.addArguments("--no-sandbox");
 		driver = new ChromeDriver(opt);
-		driver.get("https://www.wikipedia.org/");
-		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar");
-		driver.findElements(By.cssSelector("button[type='submit']")).click();
+		driver.get("http://13.127.53.13:8990/myWebApp_Test-19/");
+		driver.findElement(By.id("logbutton")).click();
+		driver.findElement(By.id("namecheck")).sendKeys("Kris");
+		driver.findElement(By.id("pwdcheck")).sendKeys("Krish");
+		driver.findElement(By.id("chklogin")).click();
+		
 		//WebElement textbox =driver.findElement(By.name("search"));
 		//textbox.sendKeys(Keys.ENTER);
                
           String title= driver.getTitle();
           System.out.println(title);
         
-          if(title.equalsIgnoreCase("Wikipedia")){
+          if(title.equalsIgnoreCase("SeleniumTest")){
           System.out.println("Success");
           }
           else{
