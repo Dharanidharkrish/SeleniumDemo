@@ -20,7 +20,7 @@ public class AppTest {
 		driver = new ChromeDriver(opt);
 		driver.get("https://www.wikipedia.org/");
 		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar");
-		driver.findElement(By.className("pure-button pure-button-primary-progressive")).click();
+		driver.findElement(By.name("search")).sendKeys(Keys.ENTER);
                
           String title= driver.getTitle();
           System.out.println(title);
