@@ -19,8 +19,8 @@ public class AppTest {
 		//opt.addArguments("--no-sandbox");
 		driver = new ChromeDriver(opt);
 		
-		//driver.get("https://www.wikipedia.org/");
-		driver.get("");
+		driver.get("http://13.127.53.13:8990/myWebApp_Test-20/");
+		
 		
 		driver.findElement(By.id("logbutton")).click();
 		
