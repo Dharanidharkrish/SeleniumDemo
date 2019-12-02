@@ -14,12 +14,12 @@ public class AppTest {
 		System.setProperty("webdriver.chrome.driver",
 		        "/usr/bin/chromedriver");
 		ChromeOptions opt = new ChromeOptions();
-		opt.setHeadless(true);
+		opt.addArguments("--headless");
 		opt.addArguments("window-size=1920x1080");
 		//opt.addArguments("--no-sandbox");
 		driver = new ChromeDriver(opt);
 		driver.get("https://www.wikipedia.org/");
-		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar"+ keys.ENTER);
+		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar"+ Keys.ENTER);
                
           String title= driver.getTitle();
           System.out.println(title);
