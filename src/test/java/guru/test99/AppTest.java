@@ -19,7 +19,8 @@ public class AppTest {
 		//opt.addArguments("--no-sandbox");
 		driver = new ChromeDriver(opt);
 		driver.get("https://www.wikipedia.org/");
-		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar"+Keys.ENTER);
+		driver.findElement(By.name("search")).sendKeys("Sachin Tendulkar");
+		driver.findElement(By.class("sprite svg-search-icon")).click();
                
           String title= driver.getTitle();
           System.out.println(title);
